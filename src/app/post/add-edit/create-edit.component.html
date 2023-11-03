@@ -1,0 +1,27 @@
+<div>
+    <h1 class="popup-title">{{ data ? "Edit Post" : "Add New Post" }}</h1>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <div mat-dialog-content class="content">
+            <div class="row">
+                <mat-form-field appearance="outline">
+                    <mat-label>Title</mat-label>
+                    <input matInput type="text" id="title" formControlName="title" />
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Body</mat-label>
+                    <textarea matInput id="body" type="text" formControlName="body">
+                    </textarea>
+                </mat-form-field>
+                <p class="mandatory-msg"><span class="star">*</span>Mandatory Fields</p>
+            </div>
+        </div>
+        <div mat-dialog-actions class="popup-actions">
+            <button mat-raised-button type="button" color="warn" [mat-dialog-close]="false">
+                Cancel
+            </button>
+            <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">
+                {{ data ? "Update" : "Add" }}
+            </button>
+        </div>
+    </form>
+</div>

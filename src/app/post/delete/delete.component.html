@@ -1,0 +1,14 @@
+<div>
+    <h1 class="popup-title">Delete Post</h1>
+    <div mat-dialog-content class="content">
+        Are You sure you want to delete this post?
+    </div>
+    <div mat-dialog-actions class="popup-actions" style="margin-top: 16px;">
+        <button mat-raised-button type="button" [mat-dialog-close]="false">
+            Cancel
+        </button>
+        <button mat-raised-button color="warn" (click)="deletePost()">
+            Delete
+        </button>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+.toolbar {
+    justify-content: space-between;
+}
+
+.page-wrapper {
+    padding: 20px 16px;
+
+    .actions {
+        display: flex;
+        gap: 5px;
+    }
+
+    .no-data-msg {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+
+    .table-paginator {
+        padding: 20px 0;
+    }
+}

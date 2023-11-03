@@ -1,0 +1,24 @@
+<div>
+    <h1 class="popup-title">View Post</h1>
+    <div mat-dialog-content class="content">
+        <div>
+            <strong>ID:</strong>
+            <p>{{ data.id }}</p>
+        </div>
+
+        <div>
+            <strong>Title:</strong>
+            <p>{{ data.title }}</p>
+        </div>
+
+        <div>
+            <strong>Body:</strong>
+            <p>{{ data.body }}</p>
+        </div>
+    </div>
+    <div mat-dialog-actions class="popup-actions">
+        <button mat-raised-button type="button" color="warn" [mat-dialog-close]="false">
+            Close
+        </button>
+    </div>
+</div>
